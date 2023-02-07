@@ -5,8 +5,8 @@
     grade += (parseInt($("#mid").val()) * 0.1);
     grade += (parseInt($("#fin").val()) * 0.1);
     grade += (parseInt($("#intex").val()) * 0.1);
+
     var letterGrade;
-    $('#formform').fadeOut("slow");
 
     //Loop through to see what the letter grade is
     if (grade >= 90) {
@@ -21,6 +21,9 @@
     else if (grade >= 60) {
         letterGrade = 'D';
     }
+    else if (grade <= 60) {
+        letterGrade = 'Failing'
+    }
 
-    document.getElementById("announce").innerHTML = ("Your class grade is a " + grade.toString() + "%. Your letter grade is " + letterGrade + ".");
+    alert("Your class grade is a " + String(grade) + "%. Your letter grade is " + letterGrade + "."); //Alert out the results
 })

@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+
+}
+
+@model MyWebsiteModel;
+
+<section>
+    <div class="container px-5">
+        <!--Begin form for grade calculator-->
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Grade Calculator</h2>
+                    <form class="col-form-label-lg" id="formform" method="post">
+                        <label>Assignments:</label>
+                        <input class="input-group-text" id="assign" asp-for="Assignments" /><br /><br /> <!--The asp-for areas help the controller to know which data validation is for which input--> 
+                        <label>Group Projects:</label>
+                        <input class="input-group-text" id="proj" asp-for="Projects" /><br /><br />
+                        <label>Quizzes:</label>
+                        <input class="input-group-text" id="quiz" asp-for="Quizzes" /><br /><br />
+                        <label>Midterm:</label>
+                        <input class="input-group-text" id="mid" asp-for="Midterm" /><br /><br />
+                        <label>Final:</label>
+                        <input class="input-group-text" id="fin" asp-for="Final" /><br /><br />
+                        <label>Intex:</label>
+                        <input class="input-group-text" id="intex" asp-for="Intex" /><br /><br />
+                        <div asp-validation-summary="All"></div>
+
+                        <input id="btnsend" class="btn btn-primary btn-xl rounded-pill mt-5" type="submit" value="Calculate" /> <!-- submit button -->
+                    </form>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
